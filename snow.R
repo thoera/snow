@@ -36,7 +36,7 @@ create_snow <- function(snowflake = 100, length = 100, speed = 0.025) {
               "snow_on_the_ground" = snow_on_the_ground))
 }
 
-tree <- function(center = 0.7) {
+create_tree <- function(center = 0.7) {
   x <- c(0.23, 0.21, 0.18, 0.14, 0.17, 0.15,
          0.12, 0.11, 0.13, 0.09, 0.06, 0.03, 0.01)
   x1 <- center - x / 2
@@ -79,7 +79,7 @@ plot_snow <- function(snow_in_the_sky, snow_on_the_ground) {
 }
 
 snow <- create_snow(snowflake = 250, length = 500, speed = 0.005)
-christmas_tree <- tree(center = 0.7)
+christmas_tree <- create_tree(center = 0.7)
 
 img <- image_graph(width = 1920, height = 1080, res = 96)
 snowstorm <- map(seq_along(snow[[1]]), function(x) {
